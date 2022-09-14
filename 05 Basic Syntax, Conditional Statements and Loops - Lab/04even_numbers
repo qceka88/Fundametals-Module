@@ -1,0 +1,43 @@
+lines = int(input())
+
+even = True
+for _ in range(lines):
+    current_number = int(input())
+    if current_number % 2 != 0:
+        print(f"{current_number} is odd!")
+        even = False
+        break
+
+if even:
+    print('All numbers are even.')
+    
+   
+
+
+#################################### TASK CONDITION ############################
+4.	Even Numbers
+Write a program that receives a number n on the first line. On the following n lines,
+it receives different integer numbers. If the program receives an odd number, 
+print "{num} is odd!" and end the program. Otherwise, if all numbers given are even, print "All numbers are even.".
+
+____________________________________________________________________________________________
+Example_01
+
+Input 
+2
+12
+286	
+
+Output
+All numbers are even.
+
+____________________________________________________________________________________________
+Example_02
+
+Input 
+5
+2
+9	
+
+Output
+9 is odd!
