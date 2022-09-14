@@ -1,0 +1,45 @@
+number = int(input())
+
+for i in range(number+1):
+    print('*' * i)
+for i in range(number-1,-1,-1):
+    print('*' * i)
+    
+        
+
+
+
+#################################### TASK CONDITION ############################
+7.	Patterns
+Write a program that receives a number and creates the following pattern. 
+The number represents the largest count of stars on one row.
+
+____________________________________________________________________________________________
+Example_01
+
+Input 
+3
+
+Output
+*
+**
+***
+**
+*
+
+____________________________________________________________________________________________
+Example_02
+
+Input 
+5	
+
+Output
+*
+**
+***
+****
+*****
+****
+***
+**
+*
