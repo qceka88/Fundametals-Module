@@ -1,0 +1,30 @@
+input_word= input()
+reversed_word = input_word[-1::-1]
+print(reversed_word)
+
+
+    
+
+
+
+#################################### TASK CONDITION ############################
+3.	Word Reverse
+Write a program that receives a single word, reverses it, and prints it.
+
+____________________________________________________________________________________________
+Example_01
+
+Input
+Python	
+
+Output
+nohtyP
+
+____________________________________________________________________________________________
+Example_02
+
+Input
+banana	
+
+Output
+ananab
