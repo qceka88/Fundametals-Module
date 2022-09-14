@@ -1,0 +1,35 @@
+first_num = int(input())
+second_num = int(input())
+third_num = int(input())
+
+print(max(first_num,second_num,third_num))
+    
+
+
+
+#################################### TASK CONDITION ############################
+
+2.	Largest of Three Numbers
+Write a program that receives three whole numbers and prints the largest one.
+
+____________________________________________________________________________________________
+Example_01
+
+Input 
+3
+-1
+5	
+
+Output
+5
+
+____________________________________________________________________________________________
+Example_02
+
+Input 
+0
+-1
+-2	
+
+Output
+0
