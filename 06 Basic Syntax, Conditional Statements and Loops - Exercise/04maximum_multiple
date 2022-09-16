@@ -1,0 +1,47 @@
+start=int(input())
+end=int(input())
+
+for num in range(end,start,-1):
+    if num % start == 0:
+        print(num)
+        break
+
+
+
+
+#################################### TASK CONDITION ############################
+4.	Maximum Multiple
+On the first line, you will be given a positive number, which will serve as a divisor. 
+On the second line, you will receive a positive number that will be the boundary.
+You should find the largest integer N, that is:
+•	divisible by the given divisor
+•	less than or equal to the given bound
+•	greater than 0
+Note: it is guaranteed that N is found.
+____________________________________________________________________________________________
+Example_01
+
+Input 
+2
+7	
+
+Output
+6
+____________________________________________________________________________________________
+Example_02
+
+Input 
+10
+50	
+
+Output
+50
+____________________________________________________________________________________________
+Example_03
+
+Input 
+37
+200	
+
+Output
+185
