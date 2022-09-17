@@ -1,0 +1,86 @@
+orders = int(input())
+total_price = 0
+for _ in range(orders):
+    order = False
+    capsule_price = float(input())
+    days = int(input())
+    capsules_per_day = int(input())
+    if capsule_price < 0.01 or capsule_price > 100:
+        continue
+    if days < 1 or days > 31:
+        continue
+    if capsules_per_day  < 1 or capsules_per_day > 2000:
+        continue
+    order_price = capsule_price * capsules_per_day * days
+    print(f"The price for the coffee is: ${order_price:.2f}")
+    total_price += order_price
+
+print(f"Total: ${total_price:.2f}")
+    
+
+
+#################################### TASK CONDITION ############################
+5.	Orders
+You work at a coffee shop, and your job is to place orders to the distributors. 
+Thus, you want to know the price of each order. On the first line, 
+you will receive integer N - the number of orders the shop will receive. 
+For each order, you will receive the following information:
+•	Price per capsule - a floating-point number in the range [0.01…100.00]
+•	Days - integer in the range [1…31]
+•	Capsules, needed per day - integer in the range [1…2000]
+For each order, you should print a single line in the following format:
+•	"The price for the coffee is: ${price}"
+If you do not receive a correct order (one or more of the values are not in the given range),
+you should ignore it and move to the next one.
+After you go through all orders, you need to print the total price in the following format:
+•	 "Total: ${total_price}"
+Both the price of a coffee and the total price must be formatted to the second decimal place. 
+
+____________________________________________________________________________________________
+Example_01
+
+Input 
+1
+1.53
+30
+8	
+
+Output
+The price for the coffee is: $367.20
+Total: $367.20
+
+
+____________________________________________________________________________________________
+Example_02
+
+Input 
+2
+4.99
+31
+3
+0.35
+31
+5	
+
+Output
+The price for the coffee is: $464.07
+The price for the coffee is: $54.25
+Total: $518.32
+
+____________________________________________________________________________________________
+Example_03
+
+Input 
+2
+9.223
+31
+0
+0.05
+10
+30	
+
+Output
+The price for the coffee is: $15.00
+Total: $15.00
+
+
