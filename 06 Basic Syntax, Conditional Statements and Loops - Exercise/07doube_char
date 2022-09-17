@@ -1,0 +1,42 @@
+command = input()
+while command != 'End':
+    if command != 'SoftUni':
+        current_string = ''
+        for letter in command:
+            current_string += letter * 2
+        print(current_string)
+
+    command = input()
+    
+
+
+#################################### TASK CONDITION ############################
+7.	Double Char
+You will be given strings until you receive the command "End". 
+For each string given, you should print a string in which each character 
+(case-sensitive) is repeated twice. Note that if you receive the string "SoftUni", you should NOT print it!
+
+____________________________________________________________________________________________
+Example_01
+
+Input 
+Hello World
+Repeat
+End	
+
+Output
+HHeelllloo  WWoorrlldd
+RReeppeeaatt
+
+____________________________________________________________________________________________
+Example_02
+
+Input 
+1234!
+SoftUni
+softuni
+End	
+
+Output
+11223344!!
+ssooffttuunnii
