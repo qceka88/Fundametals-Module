@@ -1,0 +1,46 @@
+first_string = input()
+second_string = input()
+
+last_string = first_string
+for index in range(len(first_string)):
+    right_part = first_string[index + 1::]
+    left_part = second_string[:index + 1:]
+    current_strign = left_part + right_part
+    if current_strign != last_string:
+        print(current_strign)
+        last_string = current_strign
+    
+
+
+#################################### TASK CONDITION ############################
+10.	* Mutate Strings
+You will be given two strings. Transform the first string into the second one,
+letter by letter, starting from the first one. After each interaction, 
+print the resulting string only if it is unique.
+Note: the strings will have the same length.
+
+____________________________________________________________________________________________
+Example_01
+
+Input 
+bubble gum
+turtle hum	
+
+Output
+tubble gum
+turble gum
+turtle gum
+turtle hum
+
+____________________________________________________________________________________________
+Example_02
+
+Input 
+Kitty
+Doggy	
+
+Output
+Ditty
+Dotty
+Dogty
+Doggy
