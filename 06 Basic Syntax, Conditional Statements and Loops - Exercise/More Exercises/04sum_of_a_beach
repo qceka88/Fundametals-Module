@@ -1,0 +1,23 @@
+given_string = input().lower()
+words_list = ['water', 'fish', 'sun', 'sand']
+counter = 0
+for word in words_list:
+    if word in given_string:
+        counter += given_string.count(word)
+print(counter)
+    
+
+
+#################################### TASK CONDITION ############################
+4.	Sum of a Beach
+Beaches are filled with sand, water, fish, and sun.
+Given a string, calculate how many times the words "Sand", "Water", "Fish", and "Sun" appear (case insensitive).
+
+____________________________________________________________________________________________
+Example
+
+Input                               |     Output
+WAtErSlIde	                        |      1
+GolDeNSanDyWateRyBeaChSuNN          |	     3
+gOfIshsunesunFiSh	                  |      4
+cItYTowNcARShoW                     |	     0
