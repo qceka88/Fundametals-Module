@@ -1,0 +1,20 @@
+input_number =  input()
+new_number = []
+for number in input_number:
+    new_number.append(int(number))
+
+sorted_numbers = sorted(new_number, reverse=True)
+print(*sorted_numbers,sep='')
+    
+
+
+#################################### TASK CONDITION ############################
+1.	Find the Largest
+You will be given a number. Print the largest number that can be formed from the digits of the given number.
+
+____________________________________________________________________________________________
+Example
+
+Input              Output
+213	       |        321
+7389	     |        9873
