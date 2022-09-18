@@ -1,0 +1,67 @@
+budget = float(input())
+price_flour = float(input())
+price_eggs = price_flour * 0.75
+milk_price = price_flour * 1.25
+
+price_bread = price_flour + price_eggs + (milk_price / 4)
+eggs_counter = 0
+bread_counter = 0
+while budget - price_bread >= 0:
+    budget -= price_bread
+    bread_counter += 1
+    eggs_counter += 3
+    if bread_counter % 3 == 0:
+        eggs_counter -= bread_counter - 2
+
+print(f"You made {bread_counter} loaves of Easter bread! Now you have {eggs_counter} eggs and {budget:.2f}BGN left.")
+    
+
+
+#################################### TASK CONDITION ############################
+11.	* Easter Bread
+Since it is Easter, you have decided to make some loaves of Easter bread and exchange them for eggs.
+Create a program that calculates how many loaves you can make (according to the recipe) with the budget you have.
+Here is the recipe for one loaf:
+Eggs	1 pack
+Flour	1 kg
+Milk	0.250 l
+First, you will receive your budget. Then, you will receive the price for 1 kg flour. 
+The price for 1 pack of eggs is 75% of the price for 1 kg flour. The price for 1L milk is 25% more than the price for 1 kg flour.
+Keep in mind that you use only 250ml milk for a bread.
+Start cooking the loaves and keep making them until you have enough budget. Keep in mind that:
+•	For every loaf of bread that you make, you will receive 3 colored eggs. 
+•	For every 3rd bread you make, you will lose some of your colored eggs after
+receiving the usual 3 colored eggs for your bread. The count of eggs you will lose is 
+calculated when you subtract 2 from your current count of loaves - ({current_bread_count} - 2)
+In the end, print the loaves of bread you made, the eggs you have collected, and the money you have left,
+formatted to the 2nd decimal place, in the following format:
+"You made {number_of_loaves} loaves of Easter bread! Now you have {colored_eggs} eggs and {money_left}BGN left."
+Input / Constraints
+•	On the 1st line, you will receive the budget - a real number in the range [0.0…100000.0]
+•	On the 2nd line, you will receive the price for 1 kg flour - a real number in the range [0.0…100000.0]
+•	The input will always be in the correct format
+•	You will always have a remaining budget
+•	There will not be a case in which the eggs become a negative count
+Output
+•	In the end, print the number of loaves of Easter bread you have made, the colored eggs you have gathered, 
+and the money formatted to the 2nd decimal place in the format described above.
+
+____________________________________________________________________________________________
+Example_01
+
+Input
+20.50
+1.25	
+
+Output
+You made 7 loaves of Easter bread! Now you have 16 eggs and 2.45BGN left.
+
+____________________________________________________________________________________________
+Example_02
+
+Input
+15.75
+1.4	
+
+Output
+You made 5 loaves of Easter bread! Now you have 14 eggs and 1.31BGN left.
