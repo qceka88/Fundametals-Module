@@ -1,0 +1,29 @@
+input_pounds = int(input())
+dollars = input_pounds  * 1.31
+print(f'{dollars:.3f}')
+
+    
+
+
+#################################### TASK CONDITION ############################
+5.	Pounds to Dollars
+Write a program that converts British pounds (integer) to US dollars formatted to the 3rd decimal point.
+1 British Pound = 1.31 Dollars.
+
+____________________________________________________________________________________________
+Example_01
+
+Input 
+80	
+
+Output
+104.800
+
+____________________________________________________________________________________________
+Example_02
+
+Input 
+39	
+
+Output
+51.090
