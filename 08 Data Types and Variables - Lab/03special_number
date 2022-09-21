@@ -1,0 +1,62 @@
+input_number = int(input())
+
+searched_sum = [5, 7, 11]
+
+for number in range(1, input_number + 1):
+    check_number = str(number)
+    special = False
+    sum_of_digits = 0
+    if len(check_number) < 2:
+        sum_of_digits = int(number)
+    else:
+        first_digit = int(check_number[0])
+        second_digit = int(check_number[1])
+        sum_of_digits = first_digit + second_digit
+    if sum_of_digits in searched_sum:
+        special = True
+    print(f'{number} -> {special}')
+        
+
+
+#################################### TASK CONDITION ############################
+3.	Special Numbers
+Write a program that reads an integer n. Then, for all numbers in the range [1, n],
+prints the number and if it is special or not (True / False). A number is special when the sum of its digits is 5, 7, or 11.
+
+____________________________________________________________________________________________
+Example_01
+
+Input 
+15	
+
+Output
+1 -> False
+2 -> False
+3 -> False
+4 -> False
+5 -> True
+6 -> False
+7 -> True
+8 -> False
+9 -> False
+10 -> False
+11 -> False
+12 -> False
+13 -> False
+14 -> True
+15 -> False
+
+
+____________________________________________________________________________________________
+Example_02
+
+Input 
+6
+
+Output
+1 -> False
+2 -> False
+3 -> False
+4 -> False
+5 -> True
+6 -> False
