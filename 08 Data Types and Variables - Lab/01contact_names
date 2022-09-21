@@ -1,0 +1,52 @@
+############### variant 01 ###################
+first_name = input()
+second_name = input()
+delimeter = input()
+
+print(f'{first_name}{delimeter}{second_name}')
+
+############### variant 02 ######################
+
+input_data = [input() for i in range(3)]
+print(f'{input_data[0]}{input_data[2]}{input_data[1]}')
+
+    
+
+
+#################################### TASK CONDITION ############################
+1.	Concat Names
+Write a program that reads two names and a delimiter. 
+It should print the names joined by the delimiter.
+
+____________________________________________________________________________________________
+Example_01
+
+Input 
+John
+Smith
+->	
+
+Output
+John->Smith
+
+____________________________________________________________________________________________
+Example_02
+
+Input 
+Jan
+White
+<->	
+
+Output
+Jan<->White
+
+____________________________________________________________________________________________
+Example_03
+
+Input 
+Linda
+Terry
+=>	
+
+Output
+Linda=>Terry
