@@ -1,0 +1,40 @@
+year = int(input())
+happy_year = False
+
+while not happy_year:
+    year += 1
+    filter_years = set()
+    for digit in range(len(str(year))):
+        filter_years.add(str(year)[digit])
+
+    happy_year = len(filter_years) == len(str(year))
+
+print(year)
+
+
+    
+
+
+#################################### TASK CONDITION ############################
+6.	Next Happy Year
+You are saying goodbye to your best friend: "See you next happy year". 
+Happy Year is the year with only distinct digits, for example, 2018.
+Write a program that receives an integer number and finds the next happy year.
+
+____________________________________________________________________________________________
+Example_01
+
+Input 
+8989	
+
+Output
+9012
+
+____________________________________________________________________________________________
+Example_02
+
+Input 
+1001	
+
+Output
+1023
