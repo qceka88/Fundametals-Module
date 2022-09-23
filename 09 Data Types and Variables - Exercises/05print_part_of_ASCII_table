@@ -1,0 +1,44 @@
+first=int(input())
+second=int(input())
+for i in range(first,second+1):
+    character = chr(i)
+    print(character,end=' ')
+    
+           
+
+
+#################################### TASK CONDITION ############################
+5.	Print Part of the ASCII Table
+Write a program that prints part of the ASCII table characters on the console, 
+separated by a single space. On the first line of input, 
+you will receive the char index you should start with. On the second line - the index of the last character you should print. 
+
+____________________________________________________________________________________________
+Example_01
+
+Input 
+60
+65	
+
+Output
+< = > ? @ A
+
+____________________________________________________________________________________________
+Example_02
+
+Input 
+69
+79	
+
+Output
+E F G H I J K L M N O
+
+____________________________________________________________________________________________
+Example_03
+
+Input 
+97
+104	
+
+Output
+a b c d e f g h
