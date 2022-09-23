@@ -1,0 +1,77 @@
+number_of_refils = int(input())
+
+pool_fill = 0
+
+for refil in range(number_of_refils):
+    current_refil = int(input())
+    if pool_fill + current_refil <= 255:
+        pool_fill += current_refil
+    else:
+        print("Insufficient capacity!")
+
+print(pool_fill)
+        
+
+
+#################################### TASK CONDITION ############################
+7.	Water Overflow
+You have a water tank with a capacity of 255 liters. On the first line, you will receive n – the number of lines, which will follow. On the following n lines, you will receive liters of water (integers), which you should pour into your tank. If the capacity is not enough, print "Insufficient capacity!" and continue reading the next line. On the last line, print the liters in the tank.
+
+____________________________________________________________________________________________
+Example_01
+
+Input
+5
+20
+100
+100
+100
+20	
+
+Output
+Insufficient capacity!
+240		
+
+
+____________________________________________________________________________________________
+Example_02
+
+Input
+1
+1000
+Insufficient capacity!
+0
+
+
+____________________________________________________________________________________________
+Example_03
+
+Input
+7
+10
+20
+30
+10
+5
+10
+20	
+
+Output
+105		
+
+
+____________________________________________________________________________________________
+Example_04
+
+Input 
+4
+250
+10
+20
+40	
+
+Output
+Insufficient capacity!
+Insufficient capacity!
+Insufficient capacity!
+250
