@@ -1,0 +1,66 @@
+input_number = int(input())
+
+start_letter = 97
+final_letter = start_letter + input_number
+
+for first in range(start_letter, final_letter):
+    for second in range(start_letter, final_letter):
+        for thrith in range(start_letter, final_letter):
+           print(f"{chr(first)}{chr(second)}{chr(thrith)}")
+        
+
+
+#################################### TASK CONDITION ############################
+6.	Triples of Latin Letters
+Write a program to read an integer N and print all triples of the first N small Latin letters, ordered alphabetically:
+
+
+____________________________________________________________________________________________
+Example_01
+
+Input 
+3	
+
+Output
+aaa
+aab
+aac
+aba
+abb
+abc
+aca
+acb
+acc
+baa
+bab
+bac
+bba
+bbb
+bbc
+bca
+bcb
+bcc
+caa
+cab
+cac
+cba
+cbb
+cbc
+cca
+ccb
+ccc
+____________________________________________________________________________________________
+Example_02
+
+Input 
+2	
+
+Output
+aaa
+aab
+aba
+abb
+baa
+bab
+bba
+bbb
