@@ -1,0 +1,53 @@
+number_of_chars = int(input())
+sum_of_chars = 0
+for char in range(number_of_chars):
+    current_char = input()
+    sum_of_chars += ord(current_char)
+
+print(f"The sum equals: {sum_of_chars}")
+
+
+    
+
+
+#################################### TASK CONDITION ############################
+4.	Sum of Chars
+Write a program, which sums the ASCII codes of N characters and prints the sum on the console.
+On the first line, you will receive N – the number of lines. 
+On the following N lines – you will receive a letter per line. 
+Print the total sum in the following format: "The sum equals: {total_sum}".
+Note: n will be in the interval [1…20].
+
+____________________________________________________________________________________________
+Example_01
+
+Input
+5
+A
+b
+C
+d
+E	
+
+Output
+The sum equals: 399		12
+
+____________________________________________________________________________________________
+Example_02
+
+Input
+S
+o
+f
+t
+U
+n
+i
+R
+u
+l
+z
+z	
+
+Output
+The sum equals: 1263
