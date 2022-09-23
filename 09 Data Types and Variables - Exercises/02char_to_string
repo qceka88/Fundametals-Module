@@ -1,0 +1,45 @@
+for _ in range(3):
+    print((input()),end='')
+    
+
+    
+
+
+#################################### TASK CONDITION ############################
+2.	Chars to String
+Write a function that receives 3 characters.
+Concatenate all the characters into one string and print it on the console.
+
+____________________________________________________________________________________________
+Example_01
+
+Input 
+a
+b
+c	
+
+Output
+abc
+
+____________________________________________________________________________________________
+Example_02
+
+Input 
+%
+2
+o	
+
+Output
+%2o
+
+
+____________________________________________________________________________________________
+Example_03
+
+Input 
+1
+5
+p	
+
+Output
+15p
