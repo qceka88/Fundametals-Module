@@ -1,0 +1,45 @@
+first_number = int(input())
+second_number = int(input())
+
+print('Before:' + '\n' + f'a = {first_number}' + '\n' + f'b = {second_number}')
+
+first_number, second_number = second_number, first_number
+
+print('After:' + '\n' + f'a = {first_number}' + '\n' + f'b = {second_number}')
+        
+
+
+#################################### TASK CONDITION ############################
+1.	Exchange Integers
+Read two integer numbers and, after that, exchange their values. 
+Print the variable values before and after the exchange, as shown below:
+
+____________________________________________________________________________________________
+Example_01
+
+Input
+5
+10	
+
+Output
+Before:
+a = 5
+b = 10
+After:
+a = 10
+b = 5
+
+____________________________________________________________________________________________
+Example_02
+
+Input
+10
+20	
+
+Output
+Before:
+a = 10
+b = 20
+After:
+a = 20
+b = 10
