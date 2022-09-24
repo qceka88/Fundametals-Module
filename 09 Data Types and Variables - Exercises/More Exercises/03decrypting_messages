@@ -1,0 +1,53 @@
+key = int(input())
+number_of_lines = int(input())
+message = ""
+for number in range(number_of_lines):
+    current_symbol = ord(input())
+    new_symbol = current_symbol + key
+    message += chr(new_symbol)
+
+print(message)
+        
+
+
+#################################### TASK CONDITION ############################
+3.	Decrypting Messages
+On the first line, you will receive a key (integer). 
+On the second line, you will receive n – the number of lines, which will follow.
+On the next n lines – you will receive a lower and an uppercase letter per line.
+You should add the key to each of the characters and append them to a message.
+In the end, print the decrypted message. 
+
+____________________________________________________________________________________________
+Example_01
+
+Input
+3
+7
+P
+l
+c
+q
+R
+k
+f	
+
+Output
+SoftUni		
+
+____________________________________________________________________________________________
+Example_02
+
+Input
+1
+7
+C
+d
+b
+q
+x
+o
+s	
+
+Output
+Decrypt
