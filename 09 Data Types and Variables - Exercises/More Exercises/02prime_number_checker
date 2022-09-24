@@ -1,0 +1,30 @@
+input_number = int(input())
+
+counter = 0
+
+for num in range(1, input_number + 1):
+    if input_number % num == 0:
+        counter += 1
+
+if counter == 2:
+    print('True')
+else:
+    print('False')
+        
+
+
+#################################### TASK CONDITION ############################
+2.	Prime Number Checker
+Write a program to check if a number is prime. 
+A prime number is a natural number greater than 1, not a product of two smaller natural numbers. 
+For example, the only ways of writing 5 as a product, 1 × 5 or 5 × 1, involve 5 itself.
+The input comes as an integer number.
+The output should be True if the number is prime and False otherwise.
+
+____________________________________________________________________________________________
+Example
+
+Input    	Output
+7          True
+8         	False
+81        	False
