@@ -1,0 +1,74 @@
+lines = int(input())
+
+balanced = False
+open_counter = 0
+close_counter = 0
+
+for text in range(lines):
+    current_input = input()
+    if '(' in current_input:
+        open_counter += 1
+        if open_counter - close_counter > 1:
+            break
+        balanced = False
+    if ')' in current_input:
+        close_counter += 1
+        if open_counter < close_counter:
+            balanced = False
+            break
+        else:
+            balanced = True
+
+if balanced and open_counter == close_counter:
+    print('BALANCED')
+else:
+    print('UNBALANCED')
+        
+
+
+#################################### TASK CONDITION ############################
+4.	Balanced Brackets
+On the first line, you will receive n – the number of lines, which will follow.
+On the following n lines, you will receive one of the following:
+•	Opening bracket – "(",
+•	Closing bracket – ")" or
+•	Random string
+Your task is to find out if the brackets are balanced. That means after every
+closing bracket should follow an opening one. Nested parentheses are not valid, and if, for example,
+two consecutive opening brackets exist, the expression should be marked as unbalanced.
+You should print "BALANCED" if the parentheses are balanced and "UNBALANCED" otherwise.
+
+____________________________________________________________________________________________
+Example_01
+
+Input
+8
+(
+5 + 10
+)
+* 2 +
+(
+5
+)
+-12
+
+
+Output
+BALANCED		
+
+
+____________________________________________________________________________________________
+Example_02
+
+Input
+6
+12 *
+)
+10 + 2 -
+( 
+5 + 10
+)
+
+
+Output
+UNBALANCED
