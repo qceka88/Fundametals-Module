@@ -49,8 +49,11 @@ while another_game is not False:
         continue
     elif answer == 'N':
         print(f'Good bye, {name_input}!')
-        time.sleep(0.3)
+        time.sleep(1)
+        print('GAME   OVER')
         another_game = False
+        exit()
+
     elif answer == 'Y':
         print(f'{name_input}, welcome!')
 
