@@ -55,11 +55,11 @@ while game is not False:
             if diff > 50:
                 print('Cold, like the heart of your EX!')
             elif diff > 40:
-                print(f'{name}, very cold! Are we in Finnald?')
+                print(f'{name}, very cold! Are we in Finland?')
             elif diff > 30:
                 print(f'Cold! Not even close!')
             elif diff > 20:
-                print('Nice and warm! Like spain in Novemer')
+                print('Nice and warm! Like spain in November')
             elif diff > 10:
                 print('It, is hot here!')
             elif diff > 5:
