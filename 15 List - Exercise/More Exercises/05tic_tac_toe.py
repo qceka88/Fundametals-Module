@@ -24,7 +24,7 @@ second_player = '2'
 
 for row in range(3):
     current_row = input().split()
-    game_field.append(row)
+    game_field.append(current_row)
 
 player01 = game(game_field, first_player)
 player02 = game(game_field, second_player)
