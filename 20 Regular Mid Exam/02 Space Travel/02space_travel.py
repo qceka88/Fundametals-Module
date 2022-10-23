@@ -37,3 +37,4 @@ for command in rout:
         ammo += refil_ammo
         print(f"Ammunitions added: {refil_ammo}.")
         print(f"Fuel added: {refil_fuel}.")
+#'''' Problem conditions are in .docx .jpg files!'''

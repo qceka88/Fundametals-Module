@@ -20,3 +20,6 @@ if total_price <= budget:
 else:
     needed_money= total_price - budget
     print(f"{needed_money:.2f}$ more needed.")
+
+
+#'''' Problem conditions are in .docx .jpg files!'''

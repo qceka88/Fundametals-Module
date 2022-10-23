@@ -26,3 +26,6 @@ while command != 'end':
     command = input()
 
 print(*chat_log, sep='\n')
+
+
+#'''' Problem conditions are in .docx .jpg files!'''
