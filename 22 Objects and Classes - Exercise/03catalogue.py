@@ -16,6 +16,8 @@ class Catalogue:
                '\n'.join(sorted(self.products))
 
 
+# Part below is test code from example
+
 catalogue = Catalogue("Furniture")
 catalogue.add_product("Sofa")
 catalogue.add_product("Mirror")
