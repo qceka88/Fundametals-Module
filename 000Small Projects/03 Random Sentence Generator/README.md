@@ -12,7 +12,8 @@ This small project is part from my education in [SoftUni](https://softuni.bg/),
 [Programming Fundamentals with Python - September2022](https://softuni.bg/trainings/3840/programming-fundamentals-with-python-september-2022)
 
 Basicly this generator create a sentence from five words.
-Name, Place, Verb, Noun, Adverb, Detail. Some of the ramdom
+Name, Place, Verb, Noun, Adverb, Detail and follow construction
+in the picture below. Some of the ramdom
 generated sentences have non sence. But this program is create
 only for having fun. 
 
