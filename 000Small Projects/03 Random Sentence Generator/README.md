@@ -9,6 +9,7 @@ Small Project 03.
 
 
 
+
 This small project is part from my education in [SoftUni](https://softuni.bg/),
 [Programming Fundamentals with Python - September2022](https://softuni.bg/trainings/3840/programming-fundamentals-with-python-september-2022)
 
