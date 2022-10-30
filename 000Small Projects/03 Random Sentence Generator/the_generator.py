@@ -84,9 +84,16 @@ while True:
         close = True
         break
     elif command != 'Exit' and command:
-        print('Wrong input!')
-        print('Please press [Enter] to continue or type "Exit" to close program!')
-        command = input()
+        valid = False
+        while valid == False:
+            if command != 'Exit' and command:
+                print('Wrong input!')
+                print('Please press [Enter] to continue or type "Exit" to close program!')
+            elif command != 'Exit' and not command:
+                valid = True
+                break
+            command = input()
+        continue
     else:
         continue
 

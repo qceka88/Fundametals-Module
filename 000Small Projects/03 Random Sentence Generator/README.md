@@ -8,10 +8,11 @@ Small Project 03.
 [Replit Link](https://replit.com/@qceka88/The-generator#main.py) to try it!
 
 
+
 This small project is part from my education in [SoftUni](https://softuni.bg/),
 [Programming Fundamentals with Python - September2022](https://softuni.bg/trainings/3840/programming-fundamentals-with-python-september-2022)
 
-Basicly this generator create a sentence from five words.
+Basically this generator creates a sentence from five words.
 Name, Place, Verb, Noun, Adverb, Detail and follow construction
 in the picture below. Some of the ramdom
 generated sentences have non sence. But this program is create
@@ -21,4 +22,4 @@ only for having fun.
 
 In the picture below are shown few examples of this program.
 
-![img_1.png](img_1.png)
+![img_4.png](img_4.png)
