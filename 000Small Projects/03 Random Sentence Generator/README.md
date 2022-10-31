@@ -19,7 +19,7 @@ Name, Place, Verb, Noun, Adverb, Detail and follow construction:
 Sentence:
  + Who = Name + Place
  + Action = Adverb + Verb + Noun
- + Detail = Details is just detail described in data
+ + Detail = Details is just detail consist in data
 
 Construction is similar to the picture below.
 
@@ -32,4 +32,4 @@ In the picture below are shown few examples of this program.
 
 Some of the random generated sentences have non sense. 
 But this program is create
-only for having fun. 
+only for having fun.
