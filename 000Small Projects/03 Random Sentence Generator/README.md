@@ -14,13 +14,22 @@ This small project is part from my education in [SoftUni](https://softuni.bg/),
 [Programming Fundamentals with Python - September2022](https://softuni.bg/trainings/3840/programming-fundamentals-with-python-september-2022)
 
 Basically this generator creates a sentence from five words.
-Name, Place, Verb, Noun, Adverb, Detail and follow construction
-in the picture below. Some of the ramdom
-generated sentences have non sence. But this program is create
-only for having fun. 
+Name, Place, Verb, Noun, Adverb, Detail and follow construction:
+
+Sentence:
+ + Who = Name + Place
+ + Action = Adverb + Verb + Noun
+ + Detail = Details is just detail described in data
+
+Construction is similar to the picture below.
 
 ![img.png](img.png)
 
 In the picture below are shown few examples of this program.
 
 ![img_4.png](img_4.png)
+
+
+Some of the random generated sentences have non sense. 
+But this program is create
+only for having fun. 

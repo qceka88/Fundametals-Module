@@ -1,44 +1,83 @@
 import random
 
 
-class Generator:
+class Random:
+    def __init__(self, some_list: list):
+        self.some_list = some_list
 
-    def __init__(self, data_dict: dict):
+    def random_choise(self):
+        the_choosen_one = random.choice(self.some_list)
+        return the_choosen_one
+
+    def __repr__(self):
+        random_word = self.random_choise()
+        return random_word
+
+
+class WordsGenerator:
+
+    def __init__(self, data_dict):
         self.data_dict = data_dict
 
     def generate_random_name(self):
-        random_name = random.choice(self.data_dict['names'])
+        names_list = self.data_dict['names']
+        random_name = Random(names_list)
         return random_name
 
     def generate_random_place(self):
-        random_place = random.choice(self.data_dict['places'])
+        places_list = self.data_dict['places']
+        random_place = Random(places_list)
         return random_place
 
     def generate_random_verb(self):
-        random_verb = random.choice(self.data_dict['verbs'])
+        verbs_list = self.data_dict['verbs']
+        random_verb = Random(verbs_list)
         return random_verb
 
     def generate_random_noun(self):
-        random_noun = random.choice(self.data_dict['nouns'])
+        nouns_list = self.data_dict['nouns']
+        random_noun = Random(nouns_list)
         return random_noun
 
     def generate_random_adverb(self):
-        random_adverb = random.choice(self.data_dict['adverbs'])
-        return random_adverb
+        adverbs_ist = self.data_dict['adverbs']
+        random_adverb = Random(adverbs_ist)
+        return f'{random_adverb}'
 
     def generate_random_detail(self):
-        random_detail = random.choice(self.data_dict['details'])
+        details_list = self.data_dict['details']
+        random_detail = Random(details_list)
         return random_detail
 
+
+class Concatenator:
+
+    def __init__(self, some_dict):
+        self.some_dict = some_dict
+
+    def who_from_where(self):
+        generator = WordsGenerator(self.some_dict)
+        name = generator.generate_random_name()
+        place = generator.generate_random_place()
+        return f"{name} from {place}"
+
+    def action(self):
+        generator = WordsGenerator(self.some_dict)
+        adverb = generator.generate_random_adverb()
+        verb = generator.generate_random_verb()
+        noun = generator.generate_random_noun()
+        return f'{adverb} {verb} {noun}'
+
+    def detail(self):
+        generator = WordsGenerator(self.some_dict)
+        detail = generator.generate_random_detail()
+        return f'{detail}'
+
     def __repr__(self):
-        name = self.generate_random_name()
-        place = self.generate_random_place()
-        adverb = self.generate_random_adverb()
-        verb = self.generate_random_verb()
-        noun = self.generate_random_noun()
-        detail = self.generate_random_detail()
-        generated_sentence = f'{name} from {place} {adverb} {verb} {noun} {detail}!'
-        return generated_sentence
+        first_part = self.who_from_where()
+        second_part = self.action()
+        third_part = self.detail()
+        return first_part + " " + second_part + " " + third_part + "."
 
 
 data = {'names': ['Felis', 'Vicky', 'Jeil', 'Ronda', 'Marsha',
@@ -76,8 +115,8 @@ print('Hello this is random sentence generator!')
 
 close = False
 while True:
-    generator = Generator(data)
-    print(generator)
+    random_sentence = Concatenator(data)
+    print(random_sentence)
     print('Press [Enter] to generate new sentence, or type "Exit" for closing program.')
     command = input()
     if command == 'Exit':
