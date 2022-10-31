@@ -33,3 +33,7 @@ In the picture below are shown few examples of this program.
 Some of the random generated sentences have non sense. 
 But this program is create
 only for having fun.
+
+!NB: in .docx file you can find the Problem description.
+Current variant of "code" is small improvisation based on
+this .docx file.
