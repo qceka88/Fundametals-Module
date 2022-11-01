@@ -133,8 +133,7 @@ while True:
                 break
             command = input()
         continue
-    else:
-        continue
+
 
 if close:
     print('Successfully closed program.')
