@@ -12,14 +12,14 @@ class Translator:
         return revealed_word
 
     def decrypting(self):
-        revealed_message = ''
+        revealed_message = []
         for word in self.message_list:
-            revealed_message += self.construct_new_word(word) + ' '
+            revealed_message.append(self.construct_new_word(word))
         return revealed_message
 
     def __repr__(self):
         new_message = self.decrypting()
-        return f'{new_message}'
+        return f'{" ".join(new_message)}'
 
 
 english_to_morse = {'A': '.-', 'B': '-...', 'C': '-.-.', 'D': '-..', 'E': '.', 'F': '..-.', 'G': '--.', 'H': '....',
