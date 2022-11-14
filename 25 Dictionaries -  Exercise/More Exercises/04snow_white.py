@@ -27,21 +27,30 @@ class DwarfsDict:
             print(f'({dwarf["color"]}) {dwarf["name"]} <-> {dwarf["physics"]}')
 
 
-data_dict = {}
+def fill_dict_with_data(dict_with_dwarfs, some_data):
+    name, color, physics = some_data.split(' <:> ')
+    if color not in dict_with_dwarfs:
+        dict_with_dwarfs[color] = {}
+    if name not in dict_with_dwarfs[color]:
+        dict_with_dwarfs[color][name] = 0
+    if int(physics) > dict_with_dwarfs[color][name]:
+        dict_with_dwarfs[color][name] = int(physics)
+
+    return dict_with_dwarfs
+
+
+dwarfs_data_dict = {}
 while True:
     command = input()
     if command == 'Once upon a time':
         break
-    name, color, physics = command.split(' <:> ')
-    if color not in data_dict:
-        data_dict[color] = {}
-    if name not in data_dict[color]:
-        data_dict[color][name] = 0
-    if int(physics) > data_dict[color][name]:
-        data_dict[color][name] = int(physics)
 
-output = DwarfsDict(data_dict)
+    dwarfs_data_dict = fill_dict_with_data(dwarfs_data_dict, command)
+
+output = DwarfsDict(dwarfs_data_dict)
 output.printing()
+
+
 
 #################################### TASK CONDITION ############################
 """
