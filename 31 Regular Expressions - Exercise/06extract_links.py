@@ -3,33 +3,36 @@ import re
 
 class Regex:
 
-    def __init__(self, data):
-        self.data = data
+    def __init__(self, some_text):
+        self.some_text = some_text
 
     def regex_action(self):
-        pattern = r'(^|(?<=\s))-?(\d*)(\.\d+)?($|(?=\s))'
-        match = re.finditer(pattern, input_data)
-        return match
+        match = re.search(r'(w{3}\.)([A-Za-z0-9\-)]+\.)([a-z]+\.?)+', self.some_text)
+        if match:
+            return match.group()
 
 
-class Numbers:
+class Links:
 
-    def __init__(self, some_data):
-        self.some_data = some_data
+    def __init__(self, string):
+        self.string = string
 
     def extracting(self):
-        extracted_data = Regex(self.some_data)
-        return extracted_data.regex_action()
+        extracted_link = Regex(self.string)
+        return extracted_link.regex_action()
 
     def printing(self):
-        for matched_number in self.extracting():
-            print(matched_number.group(), end=' ')
+        if self.extracting():
+            print(self.extracting())
 
 
-input_data = input()
+input_string = input()
 
-output = Numbers(input_data)
-output.printing()
+while input_string:
+    result = Links(input_string)
+    result.printing()
+    input_string = input()
+
 
 #################################### TASK CONDITION ############################
 """
