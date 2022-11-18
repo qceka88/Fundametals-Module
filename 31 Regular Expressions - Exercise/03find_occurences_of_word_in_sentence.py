@@ -8,7 +8,7 @@ class FindMatches:
         self.word = word
 
     def extract(self):
-        match = re.findall(fr'\b{self.word}\b', self.text)
+        match = re.findall(fr'(?i)\b{self.word}\b', self.text)
         return match
 
     def __repr__(self):
@@ -16,8 +16,8 @@ class FindMatches:
         return f'{number_occurrences}'
 
 
-sentence = input().lower()
-searched_word = input().lower()
+sentence = input()
+searched_word = input()
 
 occurrences = FindMatches(sentence, searched_word)
 print(occurrences)
