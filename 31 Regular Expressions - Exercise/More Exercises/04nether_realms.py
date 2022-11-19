@@ -63,8 +63,8 @@ class Information:
         names_of_demons = names_object.regex_name()
         for demon in names_of_demons:
             demon_name = demon.strip()
-            extract_ojbect = Extracting(demon_name, self.demons_stats)
-            self.demons_stats = extract_ojbect.returning_data()
+            extract_object = Extracting(demon_name, self.demons_stats)
+            self.demons_stats = extract_object.returning_data()
         return self.demons_stats
 
     def printing(self):
