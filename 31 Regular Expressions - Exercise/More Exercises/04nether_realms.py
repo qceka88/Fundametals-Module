@@ -72,9 +72,7 @@ class Information:
             print(f"{name} - {stats[0]} health, {stats[1]:.2f} damage")
 
 
-input_line = input()
-output = Information(input_line)
-output.printing()
+output = Information(input()).printing()
 
 
 ##################################### variant 02 #####################################
