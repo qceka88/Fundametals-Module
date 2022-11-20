@@ -106,7 +106,7 @@ o	"Content: {extracted content}"
 ____________________________________________________________________________________________
 Example
 
->>>>>>>> Example must be on a single line. Here is separated on two rows for easy reading <<<<<<<<
+>>>>>>>> Input must be on a single line. Here is separated on two rows for easy reading <<<<<<<<
 Input
 <html>\n<head><title>Some title</title></head>\n<body>Here<p> is some 
 </p>content <a href="www.somesite.com">\nclick</body>\n</html>
