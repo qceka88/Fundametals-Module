@@ -1,3 +1,4 @@
+##################################### variant 01 #####################################
 class Secrets:
 
     def __init__(self, some_input, message):
@@ -57,6 +58,35 @@ class Main:
 
 initial_message = input()
 output = Main(initial_message).input_data()
+
+##################################### variant 02 #####################################
+message = input()
+command = input()
+
+while command != 'Reveal':
+    input_data = command.split(":|:")
+    action = input_data[0]
+    substring = input_data[1]
+    if action == 'InsertSpace':
+        index = int(substring)
+        message = message[:index] + ' ' + message[index:]
+        print(message)
+    elif action == 'Reverse':
+        if substring not in message:
+            print('error')
+        else:
+            reversed_string = substring[::-1]
+            message = message.replace(substring, '', 1)
+            message += reversed_string
+            print(message)
+    elif action == 'ChangeAll':
+        if substring in message:
+            new_string = input_data[2]
+            message = message.replace(substring, new_string)
+            print(message)
+
+    command = input()
+print(f"You have a new text message: {message}")
 
 
 #################################### TASK CONDITION ############################
