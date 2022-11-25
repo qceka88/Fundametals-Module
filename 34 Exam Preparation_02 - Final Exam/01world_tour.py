@@ -1,5 +1,5 @@
 ##################################### variant 01 #####################################
-
+travel = input()
 while True:
     command = input()
     if command == 'Travel':
@@ -119,7 +119,7 @@ output = Main(initial_locations)
 output.choose_destination()
 output.printing()
 
-travel = input()
+
 
 #################################### TASK CONDITION ############################
 """
