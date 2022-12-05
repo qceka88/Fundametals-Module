@@ -1,4 +1,5 @@
 Problem description
 
-![img.png](01.png)
-![img.png](02.png)
+![img.png](01.PNG)
+
+![img.png](02.PNG)
