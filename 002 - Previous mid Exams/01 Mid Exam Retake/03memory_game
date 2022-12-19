@@ -1,0 +1,143 @@
+elements = input().split()
+
+moves = 0
+
+while True:
+    input_command = input()
+    if len(elements) < 1:
+        print(f"You have won in {moves} turns!")
+        break
+    if input_command == 'end':
+        print("Sorry you lose :(")
+        print(*elements)
+        break
+
+    indeces = input_command.split(' ')
+    moves += 1
+    index_01 = int(indeces[0])
+    index_02 = int(indeces[1])
+    middle = int(len(elements) / 2)
+    if index_02 == index_01 or index_01 < 0 or index_01 >= len(elements) or index_02 < 0 or index_02 >= len(elements):
+        elements.insert(middle, f'-{moves}a')
+        elements.insert(middle, f'-{moves}a')
+        print("Invalid input! Adding additional elements to the board")
+    elif elements[index_01] == elements[index_02]:
+        element = elements[index_01]
+        print(f"Congrats! You have found matching elements - {element}!")
+        elements.remove(element)
+        elements.remove(element)
+    else:
+        print('Try again!')
+          
+        
+
+
+#################################### TASK CONDITION ############################
+
+Problem 3 - Memory game
+Problem for exam preparation for the Programming Fundamentals Course @SoftUni.
+Submit your solutions in the SoftUni judge system at https://judge.softuni.org/Contests/Practice/Index/2517#1.
+
+Write a program that recreates the Memory game.
+On the first line, you will receive a sequence of elements.
+Each element in the sequence will have a twin. Until the player receives "end" from the console,
+you will receive strings with two integers separated by a space, representing the indexes of elements in the sequence.
+If the player tries to cheat and enters two equal indexes or indexes which are out of bounds of the sequence
+, you should add two matching elements at the middle of the sequence in the following format:
+"-{number of moves until now}a" 
+Then print this message on the console:
+"Invalid input! Adding additional elements to the board"
+Input
+•	On the first line, you will receive a sequence of elements
+•	On the following lines, you will receive integers until the command "end"
+Output
+•	Every time the player hit two matching elements, you should remove them from the sequence and print on the console the following message:
+"Congrats! You have found matching elements - ${element}!"
+•	If the player hit two different elements, you should print on the console the following message:
+"Try again!"
+•	If the player hit all matching elements before he receives "end" from the console, you should print on the console the following message: 
+"You have won in {number of moves until now} turns!"
+•	If the player receives "end" before he hits all matching elements, you should print on the console the following message:
+"Sorry you lose :(
+{the current sequence's state}"
+Constraints
+•	All elements in the sequence will always have a matching element.
+
+____________________________________________________________________________________________
+Example_01
+
+Input 
+1 1 2 2 3 3 4 4 5 5 
+1 0
+-1 0
+1 0 
+1 0 
+1 0 
+end	
+
+Output
+Congrats! You have found matching elements - 1!
+Invalid input! Adding additional elements to the board
+Congrats! You have found matching elements - 2!
+Congrats! You have found matching elements - 3!
+Congrats! You have found matching elements - -2a!
+Sorry you lose :(
+4 4 5 5
+
+Explanation
+1)
+1 0
+1 1 2 2 3 3 4 4 5 5 –> 1 = 1, equal elements, so remove them. Moves: 1
+2)
+-1 0
+-1 is invalid index so we add additional elements 
+2 2 3 3 -2а -2а 4 4 5 5, Moves: 2
+3)
+1 0
+2 2 3 3 -2а -2а 4 4 5 5 -> 2 = 2, equal elements, so remove them. Moves: 3
+4)
+1 0
+3 3 -2а -2а 4 4 5 5 -> 3 = 3, equal elements, so remove them. Moves: 4
+5)
+1 0
+-2а -2а 4 4 5 5 -> -2а = -2а, equal elements, so remove them. Moves: 5
+6)
+You receive the end command.
+There are still elements in the sequence, so the player loses the game.
+Final state - 4 4 5 5
+
+____________________________________________________________________________________________
+Example_02
+
+Input 
+a 2 4 a 2 4 
+0 3 
+0 2
+0 1
+0 1 
+end	
+
+Output
+Congrats! You have found matching elements - a!
+Congrats! You have found matching elements - 2!
+Congrats! You have found matching elements - 4!
+You have won in 3 turns!
+
+____________________________________________________________________________________________
+Example_03
+
+Input 
+a 2 4 a 2 4 
+4 0 
+0 2
+0 1
+0 1 
+end	
+
+Output
+Try again!
+Try again!
+Try again!
+Try again!
+Sorry you lose :(
+a 2 4 a 2 4

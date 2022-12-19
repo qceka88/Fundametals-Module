@@ -1,0 +1,79 @@
+initial_list = input().split('!')
+
+while True:
+    command = input()
+    if command == "Go Shopping!":
+        break
+    current_input = command.split()
+    order = current_input[0]
+    product = current_input[1]
+    if order == 'Urgent':
+        if product  not in initial_list:
+            initial_list.insert(0, product)
+    elif order == 'Unnecessary':
+        if product  in initial_list:
+            initial_list.remove(product)
+    elif order == 'Correct':
+        if product in initial_list:
+            new_product = current_input[2]
+            index = initial_list.index(product)
+            initial_list[index] = new_product
+    elif order== 'Rearrange':
+        if product  in initial_list:
+            initial_list.remove(product)
+            initial_list.append(product)
+
+print(*initial_list,sep=', ')
+    
+
+
+#################################### TASK CONDITION ############################
+Problem 2 - Shopping List
+Problem for exam preparation for the Programming Fundamentals Course @SoftUni.
+Submit your solutions in the SoftUni judge system at https://judge.softuni.org/Contests/Practice/Index/2031#1.
+
+It's the end of the week, and it is time for you to go shopping, so you need to create a shopping list first.
+Input
+You will receive an initial list with groceries separated by an exclamation mark "!".
+After that, you will be receiving 4 types of commands until you receive "Go Shopping!".
+•	"Urgent {item}" - add the item at the start of the list. 
+If the item already exists, skip this command.
+•	"Unnecessary {item}" - remove the item with the given name, only if it exists in the list.
+Otherwise, skip this command.
+•	"Correct {oldItem} {newItem}" - if the item with the given old name exists,
+change its name with the new one. Otherwise, skip this command.
+•	"Rearrange {item}" - if the grocery exists in the list, remove it from its current
+position and add it at the end of the list. Otherwise, skip this command.
+Constraints
+•	There won't be any duplicate items in the initial list
+Output
+•	Print the list with all the groceries, joined by ", ":
+"{firstGrocery}, {secondGrocery}, … {nthGrocery}"
+
+____________________________________________________________________________________________
+Example_01
+
+Input 
+Tomatoes!Potatoes!Bread
+Unnecessary Milk
+Urgent Tomatoes
+Go Shopping!
+
+Output
+Tomatoes, Potatoes, Bread
+
+____________________________________________________________________________________________
+Example_02
+
+Input 
+Milk!Pepper!Salt!Water!Banana
+Urgent Salt
+Unnecessary Grapes 
+Correct Pepper Onion
+Rearrange Grapes
+Correct Tomatoes Potatoes
+Go Shopping!	
+
+Output
+Milk, Onion, Salt, Water, Banana
+

@@ -1,0 +1,90 @@
+initial_energy = int(input())
+
+wins = 0
+enough_energy = False
+
+while True:
+    command = input()
+    if command == 'End of battle':
+        enough_energy = True
+        break
+    distance = int(command)
+    if initial_energy - distance >= 0:
+        initial_energy -= distance
+        wins += 1
+        if wins % 3 == 0:
+            initial_energy += wins
+    else:
+        break
+
+if enough_energy:
+    print(f"Won battles: {wins}. Energy left: {initial_energy}" )
+else:
+    print(f"Not enough energy! Game ends with {wins} won battles and {initial_energy} energy")
+    rint(f"Time needed: {hours}h.")
+
+  
+        
+
+
+#################################### TASK CONDITION ############################
+Problem 1 - Counter-Strike
+Problem for exam preparation for the Programming Fundamentals Course @SoftUni.
+Submit your solutions in the SoftUni judge system at https://judge.softuni.org/Contests/Practice/Index/2305#0.
+
+Write a program that keeps track of every won battle against an enemy.
+You will receive initial energy. Afterward, you will start receiving
+the distance you need to reach an enemy until the "End of battle" command is given, or you run out of energy.
+The energy you need for reaching an enemy is equal to the distance you receive.
+Each time you reach an enemy, you win a battle, and your energy is reduced. 
+Otherwise, if you don't have enough energy to reach an enemy, end the program and print:
+"Not enough energy! Game ends with {count} won battles and {energy} energy".
+Every third won battle increases your energy with the value of your current count of won battles.
+Upon receiving the "End of battle" command, print the count of won battles in the following format:
+"Won battles: {count}. Energy left: {energy}" 
+Input / Constraints
+•	On the first line, you will receive initial energy – an integer [1-10000].
+•	On the following lines, you will be receiving the distance of an enemy – an integer [1-10000]
+Output
+•	The description contains the proper output messages for each case and the format they should be printed.
+
+____________________________________________________________________________________________
+Example_01
+
+Input 
+100
+10
+10
+10
+1
+2
+3
+73
+10	
+
+Output
+Not enough energy! Game ends with 7 won battles and 0 energy	
+
+Explanation
+The initial energy is 100. The first distance is 10, so we subtract 10 from 100,
+and we consider this a won battle. We are left with 90 energy. 
+Next distance – 10, and 80 energy left.
+Next distance – 10, 3 won battles and 70 energy, but since we have 3 won battles,
+we increase the energy with the current count of won battles, in this case – 3, and it becomes 73.
+The last distance we receive – 10 is unreachable since we have 0 energy, 
+so we print the appropriate message, and the program ends.
+
+
+____________________________________________________________________________________________
+Example_02
+
+Input 
+200
+54
+14
+28
+13
+End of battle	
+
+Output
+Won battles: 4. Energy left: 94	
